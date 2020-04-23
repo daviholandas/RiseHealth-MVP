@@ -1,0 +1,78 @@
+<html>
+    <style>
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+        }
+        .table th,
+        .table td {
+            padding: 0.75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+            text-align: start;
+        }
+        .table-bordered {
+            border: 1px solid #dee2e6;
+        }
+        .table-bordered th,
+        .table-bordered td {
+            border: 1px solid #dee2e6;
+        }
+        .table-bordered thead th,
+        .table-bordered thead td {
+            border-bottom-width: 2px;
+        }
+        .tabela{
+            margin-top: 150px;
+            width: 595px;
+        }
+    </style>
+    <body>
+
+        <div class="container tabela">
+            <table>
+                    <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col" colspan="3">Ficha de atendimento</th>
+                                <th scope="col">Data: {{date}}</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" colspan="4">Nome: {{pacienteID.nome}}</th>
+                              </tr>
+                              <tr>
+                                <th scope="row" colspan="2">CPF: {{pacienteID.documentos}}</th>
+                                <th>Telefone: {{pacienteID.telefone}}</th>
+                                <th>Sexo: {{pacienteID.sexo}}</th>
+                              </tr> 
+                              <tr>
+                                <th colspan="3">Atendimento: {{profissional}}</th>
+                                <th>Convenio: {{pacienteID.convenio}}</th>
+                              </tr>
+                              <tr>
+                                <th colspan="4" rowspan="2">
+                                  Procedimentos:
+                                    <ul>
+                                      {{#procedimentos}}
+                                      <li>{{procedimento}}</li>
+                                      {{/procedimentos}}
+                                    </ul>
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+            </table>
+        </div>
+        
+    </body>
+</html>

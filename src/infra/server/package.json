@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Será o server onde irá rodar o frontend",
+  "main": "server.js",
+  "scripts": {},
+  "author": "Davi Holanda",
+  "license": "SEE LICENSE IN LINCENÇA",
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "body-parser": "^1.18.3",
+    "chrome-launcher": "^0.10.5",
+    "connect-history-api-fallback": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "puppeteer": "^1.12.2",
+    "socket.io": "^2.2.0"
+  },
+  "bin": "server.js",
+  "pkg": {
+    "assets": [
+      "public/**/*"
+    ]
+  }
+}
